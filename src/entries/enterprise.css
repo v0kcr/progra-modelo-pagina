@@ -1,0 +1,223 @@
+:root {
+  --color-primary: #123A5F;
+  --color-primary-dark: #0C2A46;
+  --color-primary-soft: #E6EEF5;
+  --color-accent: #0F8B7E;
+  --color-bg: #F7F9FB;
+  --color-surface: #FFFFFF;
+  --color-border: #DCE3EA;
+  --color-text: #16212B;
+  --color-text-muted: #67757F;
+  --color-success: #1E7F4D;
+  --color-warning: #B7791F;
+  --color-danger: #B4322B;
+  --color-info: #3B6FA8;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background: var(--color-bg);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.enterprise-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+}
+
+.enterprise-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  background: var(--color-bg);
+}
+
+.enterprise-main > main {
+  flex: 1;
+  background: var(--color-bg);
+  padding: 24px 28px;
+  box-sizing: border-box;
+}
+
+.enterprise-content {
+  padding: 0;
+}
+
+.enterprise-content p {
+  margin: 0 0 12px;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.text-muted {
+  color: var(--color-text-muted) !important;
+}
+
+:root {
+  --bs-primary: #123A5F;
+  --bs-primary-rgb: 18, 58, 95;
+  --bs-success: #1E7F4D;
+  --bs-success-rgb: 30, 127, 77;
+  --bs-warning: #B7791F;
+  --bs-warning-rgb: 183, 121, 31;
+  --bs-danger: #B4322B;
+  --bs-danger-rgb: 180, 50, 43;
+  --bs-info: #3B6FA8;
+  --bs-info-rgb: 59, 111, 168;
+  --bs-body-bg: #F7F9FB;
+  --bs-body-color: #16212B;
+  --bs-border-color: #DCE3EA;
+}
+
+.btn-accent {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #0F8B7E;
+  --bs-btn-border-color: #0F8B7E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0C746A;
+  --bs-btn-hover-border-color: #0C746A;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #095F57;
+  --bs-btn-active-border-color: #095F57;
+}
+
+.bg-primary-soft {
+  background-color: var(--color-primary-soft) !important;
+}
+
+.bg-surface {
+  background-color: var(--color-surface) !important;
+}
+
+.text-primary-custom {
+  color: var(--color-primary) !important;
+}
+
+.text-muted-custom {
+  color: var(--color-text-muted) !important;
+}
+
+.border-custom {
+  border-color: var(--color-border) !important;
+}
+
+/* Reglas de fallback para el sidebar/layout (por si el CSS del componente no carga) */
+.enterprise-main {
+  display: flex;
+  align-items: stretch;
+}
+
+.enterprise-sidebar {
+  width: 240px;
+  min-width: 240px;
+  background: #f3f6fa;
+  border-right: 1px solid #d9e3ee;
+  padding: 18px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-nav,
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #2a4867;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.sidebar-link.active,
+.sidebar-link:hover {
+  background: #e8f0fa;
+  color: #123a5f;
+}
+
+/* ==========================
+   Enterprise pages layout
+   ========================== */
+.enterprise-content {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 18px;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 18px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(18,58,95,0.03);
+}
+
+.card h3, .card h4 {
+  margin: 0 0 8px 0;
+  color: var(--color-primary-dark);
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offer-item, .applicant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.applicant-meta {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.btn-primary-custom {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .two-columns { grid-template-columns: 1fr; }
+  .dashboard-cards { flex-direction: column; }
+}

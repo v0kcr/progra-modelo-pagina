@@ -1,50 +1,94 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faTrophy, faUsers, faRunning, faTags, faChartPie } from '@fortawesome/free-solid-svg-icons';
+// src/partials/SideBarEnterprise.jsx
 
-export default function Sidebar() {
-  const linkClass = ({ isActive }) => 
-    `nav-link d-flex align-items-center gap-2 ${isActive ? 'active bg-primary text-white' : 'text-dark'}`;
+import { NavLink } from 'react-router-dom'
+import './SidebarEnterprise.css'
 
+export default function SidebarEnterprise() {
   return (
-    <div className="d-flex flex-column p-3 bg-light border-end" style={{ width: '250px', minHeight: '100vh' }}>
-      <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none px-2">
-        <span className="fs-4 fw-bold">Futbol App</span>
-      </a>
-      <hr />
-      <ul className="nav nav-pills flex-column mb-auto gap-1">
-        <li className="nav-item">
-          <NavLink to="/admin" end className={linkClass}>
-            <FontAwesomeIcon icon={faChartPie} /> Dashboard
+    <aside className="enterprise-sidebar">
+
+      <nav className="sidebar-nav">
+
+        {/* CONVOCATORIAS */}
+        <div className="sidebar-group">
+
+          <div className="sidebar-group-title">
+            CONVOCATORIAS
+          </div>
+
+          <NavLink
+            to="/enterprise"
+            className="sidebar-link"
+          >
+            Mis convocatorias
           </NavLink>
-        </li>
-        <li>
-          <NavLink to="/admin/players" className={linkClass}>
-            <FontAwesomeIcon icon={faRunning} /> Jugadores
+
+          <NavLink
+            to="/enterprise/nueva-convocatoria"
+            className="sidebar-link"
+          >
+            Nueva convocatoria
           </NavLink>
-        </li>
-        <li>
-          <NavLink to="/admin/teams" className={linkClass}>
-            <FontAwesomeIcon icon={faUsers} /> Equipos
+
+          <NavLink
+            to="/enterprise/bandeja"
+            className="sidebar-link"
+          >
+            Bandeja de postulantes
           </NavLink>
-        </li>
-        <li>
-          <NavLink to="/admin/leagues" className={linkClass}>
-            <FontAwesomeIcon icon={faTrophy} /> Ligas
+
+        </div>
+
+
+        {/* EMPRESA */}
+        <div className="sidebar-group">
+
+          <div className="sidebar-group-title">
+            EMPRESA
+          </div>
+
+          <NavLink
+            to="/enterprise/perfil"
+            className="sidebar-link"
+          >
+            Perfil de la empresa
           </NavLink>
-        </li>
-        <li>
-          <NavLink to="/admin/nations" className={linkClass}>
-            <FontAwesomeIcon icon={faGlobe} /> Naciones
+
+          <NavLink
+            to="/enterprise/resenas"
+            className="sidebar-link"
+          >
+            Reseñas recibidas
           </NavLink>
-        </li>
-        <li>
-          <NavLink to="/admin/catalogs" className={linkClass}>
-            <FontAwesomeIcon icon={faTags} /> Catálogos Auxiliares
+
+        </div>
+
+
+        {/* CUENTA */}
+        <div className="sidebar-group">
+
+          <div className="sidebar-group-title">
+            CUENTA
+          </div>
+
+          <NavLink
+            to="/enterprise/cambiar-password"
+            className="sidebar-link"
+          >
+            Cambiar contraseña
           </NavLink>
-        </li>
-      </ul>
-    </div>
-  );
+
+          <NavLink
+            to="/logout"
+            className="sidebar-link"
+          >
+            Cerrar sesión
+          </NavLink>
+
+        </div>
+
+      </nav>
+
+    </aside>
+  )
 }

@@ -1,0 +1,173 @@
+/* ========================================
+   FOOTER ENTERPRISE
+======================================== */
+
+.enterprise-footer {
+  width: 100%;
+  margin-top: auto;
+
+  background: linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%);
+  border-top: 1px solid var(--color-border);
+
+  color: var(--color-text);
+  font-family: inherit;
+}
+
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+======================================== */
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 28px 35px;
+}
+
+
+/* ========================================
+   BRAND
+======================================== */
+
+.footer-brand {
+  max-width: 280px;
+}
+
+.footer-logo {
+  color: var(--color-primary);
+
+  font-size: 20px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.footer-logo:hover {
+  color: var(--color-primary-dark);
+}
+
+.footer-brand p {
+  margin: 6px 0 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 13px;
+}
+
+
+/* ========================================
+   ENLACES
+======================================== */
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: var(--color-primary);
+
+  font-size: 13px;
+  text-decoration: none;
+
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--color-primary-dark);
+}
+
+
+/* ========================================
+   CONTACTO
+======================================== */
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  font-size: 13px;
+}
+
+.footer-contact span {
+  color: var(--color-text-muted);
+}
+
+.footer-contact a {
+  color: var(--color-primary);
+
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   COPYRIGHT
+======================================== */
+
+.footer-bottom {
+  min-height: 48px;
+
+  padding: 12px 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid var(--color-border);
+
+  color: var(--color-text-muted);
+
+  font-size: 12px;
+
+  background-color: rgba(18, 58, 95, 0.02);
+}
+
+.footer-version {
+  font-weight: 500;
+
+  color: var(--color-primary);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 25px 20px;
+
+    gap: 22px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .footer-bottom {
+    padding: 15px 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+}
+

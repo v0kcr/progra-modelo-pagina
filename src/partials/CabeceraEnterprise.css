@@ -1,0 +1,354 @@
+/* ========================================
+   NAVBAR ENTERPRISE
+======================================== */
+
+.enterprise-navbar {
+  width: 100%;
+  height: 72px;
+
+  background: linear-gradient(180deg, #f7fbff 0%, #edf5ff 100%);
+  border-bottom: 1px solid var(--color-border);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px 0 22px;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   CONTENIDO
+======================================== */
+
+.enterprise-navbar .container-fluid {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ========================================
+   PARTE IZQUIERDA
+======================================== */
+
+.enterprise-navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+/* Logo */
+
+.enterprise-brand {
+  color: var(--color-primary);
+
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+.enterprise-brand:hover {
+  color: var(--color-primary-dark);
+}
+
+
+/* Panel de empresa */
+
+.enterprise-panel {
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--color-primary);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  border-bottom: 3px solid transparent;
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.enterprise-panel:hover {
+  color: var(--color-primary-dark);
+
+  border-bottom-color: var(--color-primary);
+}
+
+
+/* ========================================
+   PARTE DERECHA
+======================================== */
+
+.enterprise-navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+/* ========================================
+   BUSCADOR
+======================================== */
+
+.enterprise-search {
+  width: 280px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  padding: 0 12px;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  box-sizing: border-box;
+}
+
+.enterprise-search:focus-within {
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 3px rgba(18, 58, 95, 0.08);
+}
+
+
+/* Icono */
+
+.enterprise-search i {
+  margin-right: 8px;
+
+  font-size: 0.85rem;
+
+  opacity: 0.6;
+
+  color: var(--color-primary);
+}
+
+
+/* Input */
+
+.enterprise-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: var(--color-text);
+
+  font-size: 0.85rem;
+}
+
+.enterprise-search input::placeholder {
+  color: var(--color-text-muted);
+}
+
+
+/* ========================================
+   CUENTA DE EMPRESA
+======================================== */
+
+.enterprise-account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 5px 8px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  background-color: #ffffff;
+
+  color: var(--color-text);
+
+  transition: background-color 0.2s;
+
+  cursor: pointer;
+}
+
+.enterprise-account:hover,
+.enterprise-account:focus {
+  background-color: var(--color-primary-soft);
+}
+
+
+/* Evita que Bootstrap agregue estilos
+   que desalineen el contenido */
+
+.enterprise-account::after {
+  margin-left: 4px;
+}
+
+
+/* ========================================
+   AVATAR
+======================================== */
+
+.enterprise-avatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #123A5F 0%, #2d5f8f 100%);
+  color: white;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   INFORMACIÓN DE EMPRESA
+======================================== */
+
+.enterprise-account-info {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  line-height: 1.2;
+
+  text-align: left;
+}
+
+.enterprise-account-info strong {
+  color: var(--color-primary);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.enterprise-account-info small {
+  margin-top: 2px;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.68rem;
+}
+
+
+/* ========================================
+   DROPDOWN
+======================================== */
+
+.dropdown-menu {
+  min-width: 220px;
+
+  margin-top: 8px;
+
+  padding: 8px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Opciones */
+
+.dropdown-item {
+  padding: 9px 10px;
+
+  border-radius: 6px;
+
+  color: var(--color-text);
+
+  font-size: 0.85rem;
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+
+/* Cerrar sesión */
+
+.text-danger {
+  color: var(--color-danger) !important;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+  .enterprise-search {
+    width: 220px;
+  }
+
+  .enterprise-navbar__left,
+  .enterprise-navbar__right {
+    gap: 12px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .enterprise-navbar {
+    height: auto;
+    min-height: 72px;
+
+    flex-wrap: wrap;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    gap: 12px;
+  }
+
+  .enterprise-navbar__right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .enterprise-search {
+    flex: 1;
+    width: auto;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .enterprise-panel {
+    display: none;
+  }
+
+  .enterprise-account-info {
+    display: none;
+  }
+}
+
